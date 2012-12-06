@@ -8,7 +8,7 @@ body
 }
 header
 {
-	background: url("logo.png") no-repeat 95% center,
+	background: url("logo.png") no-repeat 95% center, /* el 95% es de posicion */
 				url("fondo.png");
 	background-size: 200px ,100px 100px;
 	margin: 0 0 1em 0;
