@@ -4,13 +4,15 @@
     <meta charset="utf-8" />
     <title>TROLLyota corLOLa</title>
     <link rel="stylesheet" href="normalize.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="estilos.css" />
-    <script src="prefixfree.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="codigos.js"></script>
 </head>
 <body>
     <header>
         <hgroup>
-            <h1>TROLLyota corLOLa</h1>
+            <h1>Nuevo TROLLyota corLOLa</h1>
             <h2>Menos gasolina, más HTML5</h2>
         </hgroup>
     </header>
@@ -32,10 +34,43 @@
                 </ul>
             </figcaption>
         </figure>
+        <section id="personalizacion">
+            <article id="color">
+                <h2>Elige color</h2>
+                <div id="amarillo">&nbsp;</div>
+                <div id="azul">&nbsp;</div>
+                <div id="blanco">&nbsp;</div>
+                <div id="negro">&nbsp;</div>
+                <div id="rojo">&nbsp;</div>
+                <div id="verde">&nbsp;</div>
+            </article>
+            <article id="llantas">
+                <h2>Qué llantas quieres?</h2>
+                <figure id="llanta1">
+                    <img src="llanta1.png" />
+                    <figcaption>Baratas</figcaption>
+                </figure>
+                <figure id="llanta2">
+                    <img src="llanta2.png" />
+                    <figcaption>Caras</figcaption>
+                </figure>
+            </article>
+            <article id="techo">
+                <h2>Qué techo quieres?</h2>
+                <figure id="techo1">
+                    <img src="techo1.png" />
+                    <figcaption>Baratas</figcaption>
+                </figure>
+                <figure id="techo2">
+                    <img src="techo2.png" />
+                    <figcaption>Caras</figcaption>
+                </figure>
+            </article>
+        </section>
     </section>
     <nav>
         <ul>
-            <li><a href="#">Personalizar</a></li>
+            <li><a id="personalizar" href="#">Personalizar</a></li>
             <li><a href="#">Comprar</a></li>
             <li><a href="#">Contactar</a></li>
         </ul>
