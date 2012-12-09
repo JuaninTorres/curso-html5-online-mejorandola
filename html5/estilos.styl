@@ -1,17 +1,3 @@
-// Funciones
-border-radius()
-  -webkit-border-radius arguments
-  -moz-border-radius arguments
-  border-radius arguments
-transition()
-    -webkit-transition arguments
-    -moz-transition arguments
-    transition arguments
-transform()
-    -webkit-transform arguments
-    -moz-transform arguments
-    transform arguments
-
 // Asignaciones
 amarillo = #EEA024
 azul =  #166CEB
@@ -19,6 +5,29 @@ blanco = #DCDCDC
 negro = #121212
 rojo = #9F001C
 verde = #6CB944
+vendors = webkit moz o ms official
+
+// Funciones
+border-radius()
+    for vendor in vendors
+        if vendor == official
+            border-radius arguments
+        else
+            -{vendor}-border-radius arguments
+
+transition()
+    for vendor in vendors
+        if vendor == official
+            transition arguments
+        else
+            -{vendor}-transition arguments
+
+transform()
+    for vendor in vendors
+        if vendor == official
+            transform arguments
+        else
+            -{vendor}-transform arguments
 
 // Comienza lo bueno
 @font-face
@@ -39,15 +48,15 @@ header
     margin 0 0 1em 0
     padding 0.5em 0
     width 100%
-header h1
-    font-family 'Cvanderoso'
-    font-size 3em
-    margin 0
-    text-shadow rgba(0,0,0,0.8) 5px 5px 10px
-header h2
-    margin 0
-    font-weight normal
-    text-shadow rgba(0,0,0,0.75) 2px 2px 5px
+    h1
+        font-family 'Cvanderoso'
+        font-size 3em
+        margin 0
+        text-shadow rgba(0,0,0,0.8) 5px 5px 10px
+    h2
+        margin 0
+        font-weight normal
+        text-shadow rgba(0,0,0,0.75) 2px 2px 5px
 nav
     background rgba(60,60,180,0.8)
     bottom 0
@@ -57,35 +66,36 @@ nav
     padding 1em 0
     position fixed
     width 100%
-nav ul
-    list-style none
-    padding 0
-    margin 0
-nav li
-    display: inline-block
-nav li a
-    background #D23D15
-    border-radius(0.5em)
-    color white
-    display inline-block
-    margin 0 1em 0 0
-    padding 0.5em 1em
-    text-decoration none
-    transition(all 0.5s ease)
-nav li a:hover
-    background #fff
-    color black
-    transform(scale(1.2) rotate(-5deg))
+    ul
+        list-style none
+        padding 0
+        margin 0
+    li
+        display: inline-block
+        a
+            background #D23D15
+            border-radius(0.5em)
+            color white
+            display inline-block
+            margin 0 1em 0 0
+            padding 0.5em 1em
+            text-decoration none
+            transition(all 0.5s ease)
+            &:hover
+                background #fff
+                color black
+                transform(scale(1.2) rotate(-5deg))
 #cochecito
     background white
     color #222
     text-align left
     width 50%
-#cochecito figcaption
-    margin 1em
-#cochecito img
-    width 100%
-#cochecito, #historia
+    figcaption
+        margin 1em
+    img
+        width 100%
+#cochecito
+#historia
     display inline-block
     vertical-align top
 #historia
@@ -111,50 +121,53 @@ nav li a:hover
     transition(all 0.5s ease)
     vertical-align top
     width 0
-#personalizacion article
-    background rgba(255,255,255,0.9)
-    border-radius(0.5em)
-    color #333
-    margin 0 0 1em 0
-    padding 0.5em
-#personalizacion h2
-    margin-top 0
-#personalizacion #color div
-    border 3px solid #ccc
-    cursor pointer
-    display inline-block
-    height 3em
-    margin 0.5em 1%
-    opacity 0.7
-    transition(all 0.5s ease)
-    vertical-align top
-    width 27%
-#personalizacion #color div:hover
-    border 4px solid #000
-    opacity 1
-    transform(scale(1.2))
-#personalizacion #color #amarillo
-    background amarillo
-#personalizacion #color #azul
-    background azul
-#personalizacion #color #blanco
-    background blanco
-#personalizacion #color #negro
-    background negro
-#personalizacion #color #rojo
-    background rojo
-#personalizacion #color #verde
-    background verde
-#personalizacion #llantas figure:hover img
-    transform(rotate(360deg))
-#personalizacion #llantas figure, #personalizacion #techo figure
-    box-shadow rgba(0,0,0,0.2) 0px 0px 1em
-    cursor pointer
-    display inline-block
-    margin 0 2% 1em
-    padding 1%
-    vertical-align top
-    width 40%
-#personalizacion #llantas figure img, #personalizacion #techo figure img
-    transition(all 1s ease)
-    max-width 100%
+    article
+        background rgba(255,255,255,0.9)
+        border-radius(0.5em)
+        color #333
+        margin 0 0 1em 0
+        padding 0.5em
+    h2
+        margin-top 0
+    #color
+        div
+            border 3px solid #ccc
+            cursor pointer
+            display inline-block
+            height 3em
+            margin 0.5em 1%
+            opacity 0.7
+            transition(all 0.5s ease)
+            vertical-align top
+            width 27%
+            &:hover
+                border 4px solid #000
+                opacity 1
+                transform(scale(1.2))
+        #amarillo
+            background amarillo
+        #azul
+            background azul
+        #blanco
+            background blanco
+        #negro
+            background negro
+        #rojo
+            background rojo
+        #verde
+            background verde
+    #llantas figure:hover img
+        transform(rotate(360deg))
+    #llantas figure
+    #techo figure
+        box-shadow rgba(0,0,0,0.2) 0px 0px 1em
+        cursor pointer
+        display inline-block
+        margin 0 2% 1em
+        padding 1%
+        vertical-align top
+        width 40%
+    #llantas figure img
+    #techo figure img
+        transition(all 1s ease)
+        max-width 100%
